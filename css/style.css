@@ -1,127 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background-color: #2E2C2B;
   color: #DADADA;
+  font-family: "Roboto", sans-serif;
+}
+
+li, a, button{
+  font-weight: 400;
+  font-size: 16px;
+  color: beige;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  height: 100px;
+}
+
+header img {
+  height: 50px;
+  width: auto;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+
+#header-logo-name {
+  display: flex;
+  align-items: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 15px); }
-  100%   { transform: translate(0, -0px); }    
-}
-
-/* HEADER */
-
-#header{
-  text-align: center;
-  font-size: 1.6em;
-  padding: 40px;
-  color: #DADADA;
-}
-
-/* HERO SECTION */
-
-#hero-container{
+.profile {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  margin-top: 50px;
 }
 
-#hero-logo {
-  height: 500px;
+.profile img{
+  height: 40px;
   width: auto;
-  animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
+  padding-left: 25px;
 }
 
-#hero-left-container{
-  margin-right: 300px;
-  text-align: center;
+#accounts {
+  border: 1px solid wheat;
+  width: 900px;
+  height: 300px;
 }
 
-#hero-left-container h3{
-  margin-bottom: 45px;
+#recent-activity {
+  border: 1px solid wheat;
 }
 
-#hero-right-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#send-money{
+  border: 1px solid wheat;
+  width: 250px;
+  height: 400px;
 }
 
-#create-account-form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.misc-actions{
+  border: 1px solid wheat;
+  width: 250px;
+  height: 100px;
 }
 
-#create-account-form input{
-  padding-left: 15px;
-  color: black;
-  font-size: 1.1em;
-  font-weight: 600;
-  margin: 20px 0px;
-  background-color: #cecbcaca;
-  width: 400px;
-  height: 40px;
-  border: none;
+.dashboard-content {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  }
+
+.dashboard-content div {
   border-radius: 10px;
-  box-shadow: rgba(116, 21, 164,0.4) 5px 5px, rgba(116, 21, 164,0.3) 10px 10px, rgb(116, 21, 164,0.2) 15px 15px, rgb(116, 21, 164,0.1) 20px 20px;
-}
-
-#create-account-form input:focus {
-  outline: none;
-  background-color: #cecbca;
-}
-
-#hero-right-container p {
-  text-align: center;
-  font-weight: bold;
-}
-
-#submit-btn {
-  margin: 30px 0px;
-  background-color: #7415A4;
-  width: 300px;
-  height: 40px;
-}
-
-#login {
-  height: 40px;
-  margin: 20px 0px;
-}
-
-.btn {
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-}  
-
-.btn:hover .btn-slide-show-text1 {
-margin-left: 65px;}
-
-.btn-moving-gradient {
-height: 55px;
-width: 200px;
-font-size: 16px;
-font-weight: 600;
-color: rgb(255, 255, 255);
-cursor: pointer;
-border: none;
-background-size: 300% 100%;
-border-radius: 50px;}
-
-.btn-moving-gradient:hover {
-  transition: 0.5s ease-in-out;
-  background-position: 100% 0px;
+  margin: 10px;
 }
   
-.btn-moving-gradient--purple {
-background-image: linear-gradient(90deg, rgb(62, 53, 141), rgb(135, 53, 141), rgb(106, 53, 141), rgb(61, 52, 139));
-box-shadow: rgb(135, 53, 141) 0px 4px 15px 0px;
-}  
+  .all-accounts { grid-area: 1 / 1 / 4 / 5; }
+  .recent-activity-container { grid-area: 4 / 1 / 8 / 3; }
+  .send-money { grid-area: 4 / 3 / 8 / 4; }
+  .misc-button-1 { grid-area: 7 / 4 / 8 / 5; }
+  .misc-button-2 { grid-area: 6 / 4 / 7 / 5; }
+  .misc-button-3 { grid-area: 5 / 4 / 6 / 5; }
+  .misc-button-4 { grid-area: 4 / 4 / 5 / 5; }
+
+  .account-columns {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .account-columns p {
+    margin: 10px;
+  }
+
+  .recent-activity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }

@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  background-color: #2E2C2B;
+  color: #DADADA;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}
+
+/* HEADER */
+
+#header{
+  text-align: center;
+  font-size: 1.6em;
+  padding: 40px;
+  color: #DADADA;
+}
+
+/* HERO SECTION */
+
+#hero-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#hero-logo {
+  height: 500px;
+  width: auto;
+  animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+#hero-left-container{
+  margin-right: 300px;
+  text-align: center;
+}
+
+#hero-left-container h3{
+  margin-bottom: 45px;
+}
+
+#hero-right-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#create-account-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#create-account-form input{
+  padding-left: 15px;
+  color: black;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 20px 0px;
+  background-color: #cecbcaca;
+  width: 400px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(116, 21, 164,0.4) 5px 5px, rgba(116, 21, 164,0.3) 10px 10px, rgb(116, 21, 164,0.2) 15px 15px, rgb(116, 21, 164,0.1) 20px 20px;
+}
+
+#create-account-form input:focus {
+  outline: none;
+  background-color: #cecbca;
+}
+
+#hero-right-container p {
+  text-align: center;
+  font-weight: bold;
+}
+
+#submit-btn {
+  margin: 30px 0px;
+  background-color: #7415A4;
+  width: 300px;
+  height: 40px;
+}
+
+#login {
+  height: 40px;
+  margin: 20px 0px;
+}
+
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}  
+
+.btn:hover .btn-slide-show-text1 {
+margin-left: 65px;}
+
+.btn-moving-gradient {
+height: 55px;
+width: 200px;
+font-size: 16px;
+font-weight: 600;
+color: rgb(255, 255, 255);
+cursor: pointer;
+border: none;
+background-size: 300% 100%;
+border-radius: 50px;}
+
+.btn-moving-gradient:hover {
+  transition: 0.5s ease-in-out;
+  background-position: 100% 0px;
+}
+  
+.btn-moving-gradient--purple {
+background-image: linear-gradient(90deg, rgb(62, 53, 141), rgb(135, 53, 141), rgb(106, 53, 141), rgb(61, 52, 139));
+box-shadow: rgb(135, 53, 141) 0px 4px 15px 0px;
+}  

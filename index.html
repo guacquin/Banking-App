@@ -3,38 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LunaBank Banking</title>
+  <title>Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script defer src="scripts/script.js"></script>
 </head>
 <body>
-  <div id="header">
-    <h2>LunaBank</h2>
-  </div>
-  <div id="hero-container">
-    <div id="hero-left-container">
-      <h1>Take control of your finances</h1>
-      <h3>Manage your accounts in one convenient place</h3>
-      <img src="images/Logo-with-text.png" alt="Company logo" id="hero-logo">
+  <header>
+    <div id="header-logo-name">
+      <img src="images/Logo-with-text.png" alt="">
+      <h1>LunaBank</h1>
     </div>
-    <div id="hero-right-container">
-      <div class="login-alternatives">
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="">Accounts</a></li>
+        <li><a href="">Transactions</a></li>
+        <li><a href="">Send Money</a></li>
+      </ul>
+    </nav>
+    <div class="profile">
+      <h2 id="profile-name">User</h2>
+      <img src="images/person1.png" alt="">
+    </div>
+  </header>
+  <div class="dashboard-content">
+    <div class="all-accounts">
+      <h3>All Accounts</h3>
+      <div class="account-columns">
+        <div id="type">
+          <h4>Type</h4>
+          <p>Checking</p>
+          <p>Savings</p>
+          <p>Credit</p>
+        </div>
+        <div id="account-name">
+          <h4>Account Name</h4>
+          <p>126346 XXXXX CHASE</p>
+          <p>126346 XXXXX CHASE</p>
+          <p>126346 XXXXX CAPITAL ONE</p>
+        </div>
+        <div id="status">
+          <h4>Status</h4>
+          <p>Active</p>
+          <p>Active</p>
+          <p>Past Due</p>
+        </div>
+        <div id="balance">
+          <h4>Balance</h4>
+          <p>$1,196.46</p>
+          <p>$16,347.20</p>
+          <p>$6,8455.21</p>
+        </div>
       </div>
-        <form action="" id="create-account-form">
-          <input type="text" placeholder="Your full name">
-          <input type="email" placeholder="Your email address">
-          <input type="password" placeholder="Create password">
-          <input type="password" placeholder="Confirm password">
-          <button type="submit" id="submit-btn" class="btn btn-moving-gradient btn-moving-gradient--purple">Get Started</button>
-        </form>
-        <p>-  or  -</p>
-        <button class="btn btn-moving-gradient btn-moving-gradient--purple" id="login"> Log In </button>
     </div>
-  </div>
-  <div id="footer">
-
-  </div>
+    <div class="recent-activity-container">
+      <h3>Recent Activity</h3>
+      <div class="recent-activities">
+        <div class="recent-activity">
+          <p class="activity-date">10/4</p>
+          <p class="activity">X Activity</p>
+          <p class="activity-transaction">-$19.14</p>
+        </div>
+        <div class="recent-activity">
+          <p class="activity-date">10/4</p>
+          <p class="activity">X Activity</p>
+          <p class="activity-transaction">+$175.24</p>
+        </div>
+        <div class="recent-activity">
+          <p class="activity-date">10/4</p>
+          <p class="activity">X Activity</p>
+          <p class="activity-transaction">-$129.34</p>
+        </div>
+      </div>
+    </div>
+    <div class="send-money"><h3>Send Money</h3></div>
+    <div class="misc-button-1"><button>Deposit</button></div>
+    <div class="misc-button-2"><button>Transfer</button></div>
+    <div class="misc-button-3"><button>Get Help</button></div>
+    <div class="misc-button-4"><button>Log Out</button></div>
+    </div>
 </body>
 </html>
